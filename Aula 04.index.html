@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>AULA 04</title>
+    <link rel="stylesheet" type="text/css" href="user_pass_fail.index.css">
+    <script>
+        function fazerLogin() {
+            var usuario = document.getElementById("usuario");
+            var senha = document.getElementById("senha");
+
+            usuario.classList.remove("user_pass_fail");
+            senha.classList.remove("user_pass_fail");
+
+            if (usuario.value === "user" && senha.value === "pass") {
+                alert("Login Ok");
+            } else {
+                alert("Usuário ou senha incorretos");
+                usuario.classList.add("user_pass_fail");
+                senha.classList.add("user_pass_fail");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>AULA 04 - Login</h2>
+
+    <input type="text" id="usuario" placeholder="Digite o seu usuário"><br><br>
+
+    <input type="password" id="senha" placeholder="Digite a sua senha"><br><br>
+
+    <button onclick="fazerLogin()">Login</button>
+</body>
+</html>
