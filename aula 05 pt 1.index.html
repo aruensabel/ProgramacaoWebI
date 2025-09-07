@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>AULA 05 PT 1</title>
+        <link rel="stylesheet" type="text/css" href="aula 05 pt 1 css.index.css">
+        <script>
+            function Somar () {
+              var valor1 = parseFloat(document.getElementById("valor1").value);
+              var valor2 = parseFloat(document.getElementById("valor2").value);
+              var campoResultado = document.getElementById("resultado");
+
+              if (isNaN(valor1) || isNaN(valor2)) {
+                alert("Insira valores válidos");
+                return;
+              }
+
+              var resultado =valor1 + valor2;
+              campoResultado.value = resultado;
+
+              campoResultado.classList.remove("resultado-positivo", "resultado-negativo", "resultado-zero");
+
+              if (resultado > 0) {
+                campoResultado.classList.add("resultado-positivo");
+              }  else if (resultado < 0) {
+                campoResultado.classList.add("resultado-negativo");     
+              } else {
+                campoResultado.classList.add("resultado-zero");
+              }
+               
+              document.getElementById("resultado").value = resultado;
+            } 
+
+              function Subtrair () {
+                var valor1 = parseFloat(document.getElementById("valor1").value);
+                var valor2 = parseFloat(document.getElementById("valor2").value);
+
+                 if (isNaN(valor1) || isNaN(valor2)) {
+                alert("Insira valores válidos");
+                return;
+              }
+              var resultado = valor1 - valor2;
+               campoResultado.value = resultado;
+
+              campoResultado.classList.remove("resultado-positivo", "resultado-negativo", "resultado-zero");
+
+              if (resultado > 0) {
+                campoResultado.classList.add("resultado-positivo");
+              }  else if (resultado < 0) {
+                campoResultado.classList.add("resultado-negativo");     
+              } else {
+                campoResultado.classList.add("resultado-zero");
+              }
+
+              document.getElementById("resultado").value = resultado;
+
+              }
+               
+              function Multiplicar () {
+                var valor1 = parseFloat(document.getElementById("valor1").value);
+                var valor2 = parseFloat(document.getElementById("valor2").value);
+
+                if(isNaN(valor1) || isNaN(valor2)) {
+                    alert("Insira valores válidos");
+                    return;
+                }
+
+                var resultado = valor1 * valor2;
+                 campoResultado.value = resultado;
+
+              campoResultado.classList.remove("resultado-positivo", "resultado-negativo", "resultado-zero");
+
+              if (resultado > 0) {
+                campoResultado.classList.add("resultado-positivo");
+              }  else if (resultado < 0) {
+                campoResultado.classList.add("resultado-negativo");     
+              } else {
+                campoResultado.classList.add("resultado-zero");
+              }
+
+                document.getElementById("resultado").value = resultado;
+              }
+              function Dividir () {
+                var valor1 = parseFloat(document.getElementById("valor1").value);
+                var valor2 = parseFloat(document.getElementById("valor2").value);
+
+                if(isNaN(valor1) || isNaN(valor2)) {
+                    alert("Insira valores válidos");
+                    return;
+                }
+
+                var resultado = valor1 / valor2;
+                 campoResultado.value = resultado;
+
+              campoResultado.classList.remove("resultado-positivo", "resultado-negativo", "resultado-zero");
+
+              if (resultado > 0) {
+                campoResultado.classList.add("resultado-positivo");
+              }  else if (resultado < 0) {
+                campoResultado.classList.add("resultado-negativo");     
+              } else {
+                campoResultado.classList.add("resultado-zero");
+              }
+
+                document.getElementById("resultado").value = resultado;
+              }
+            
+        </script>
+    </head>
+    <body>
+        <h2>Calculadora básica</h2> 
+        <input type="number" id="valor1" placeholder="Digite o primeiro valor">
+        <input type="number" id="valor2" placeholder="Digite o segundo valor">
+        <input type="number" id="resultado" placeholder="Resultado final" readonly>
+
+        <br><br>
+     
+        <button onclick="Somar()">Somar</button>
+        <button onclick="Subtrair()">Subtrair</button>
+        <button onclick="Multiplicar()">Multiplicar</button>
+        <button onclick="Dividir()">Dividir</button>
+    </body>
+</html>

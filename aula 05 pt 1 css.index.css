@@ -1,0 +1,14 @@
+.resultado-positivo {
+    background-color: green;
+    color: white;
+}
+
+.resultado-negativo {
+    background-color: red;
+    color: white;
+}
+
+.resultado-zero {
+    background-color: gray;
+    color: white;
+}
